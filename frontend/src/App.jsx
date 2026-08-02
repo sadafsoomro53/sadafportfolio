@@ -37,6 +37,22 @@ export default function App() {
 
   useEffect(() => {
     loadData();
+
+    // Check if URL has ?admin=true
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('admin') === 'true') {
+      setAdminOpen(true);
+    }
+
+    // Keyboard shortcut listener: Ctrl + Shift + A (or Cmd + Shift + A)
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        setAdminOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
@@ -73,7 +89,7 @@ export default function App() {
       <Contact profile={data.profile} />
 
       {/* Footer */}
-      <Footer profile={data.profile} />
+      <Footer profile={data.profile} onOpenAdmin={() => setAdminOpen(true)} />
 
       {/* Project Detail Modal */}
       {selectedProject && (

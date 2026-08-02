@@ -94,28 +94,6 @@ export default function Navbar({ onOpenAdmin }) {
             </a>
           ))}
 
-          {/* Database Admin Drawer Trigger */}
-          <button
-            onClick={onOpenAdmin}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.5rem 1rem',
-              borderRadius: '10px',
-              background: 'rgba(250, 204, 21, 0.1)',
-              border: '1px solid rgba(250, 204, 21, 0.3)',
-              color: 'var(--primary-yellow)',
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              cursor: 'pointer',
-              transition: 'var(--transition-fast)'
-            }}
-            title="Open Full-Stack Database & Admin Panel"
-          >
-            <Settings size={15} />
-            <span>Admin / Database</span>
-          </button>
         </div>
 
         {/* Mobile Toggle Button */}
@@ -162,13 +140,6 @@ export default function Navbar({ onOpenAdmin }) {
               {link.name}
             </a>
           ))}
-          <button
-            onClick={() => { setMobileOpen(false); onOpenAdmin(); }}
-            className="btn-primary"
-            style={{ width: '100%', justifyContent: 'center' }}
-          >
-            <Settings size={16} /> Admin Database Manager
-          </button>
         </div>
       )}
     </nav>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Terminal, Heart, ArrowUp } from 'lucide-react';
 
-export default function Footer({ profile }) {
+export default function Footer({ profile, onOpenAdmin }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -42,9 +42,29 @@ export default function Footer({ profile }) {
           </span>
         </div>
 
-        {/* Copy Text */}
-        <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-          © {new Date().getFullYear()} {profile?.name || 'Full-Stack & AI Engineer'}. All rights reserved. Crafted with Obsidian Dark & Electric Yellow.
+        {/* Copy Text + Secret Admin Trigger */}
+        <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span>© {new Date().getFullYear()} {profile?.name || 'Full-Stack & AI Engineer'}. All rights reserved.</span>
+          {onOpenAdmin && (
+            <button
+              onClick={onOpenAdmin}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'rgba(255, 255, 255, 0.15)',
+                cursor: 'pointer',
+                padding: '2px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                transition: 'color 0.3s ease'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary-yellow)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.15)'}
+              title="Admin Access"
+            >
+              🔒
+            </button>
+          )}
         </div>
 
         {/* Scroll To Top */}
