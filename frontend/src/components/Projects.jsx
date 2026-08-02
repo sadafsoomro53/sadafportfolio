@@ -290,6 +290,28 @@ export default function Projects({ projects, onSelectProject }) {
           </div>
         )}
 
+        {/* View All Repos on GitHub CTA */}
+        <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
+          <a
+            href="https://github.com/sadafsoomro53?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-glow"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.6rem',
+              padding: '0.85rem 2rem',
+              fontSize: '1rem',
+              borderRadius: '12px',
+              textDecoration: 'none'
+            }}
+          >
+            <Github size={20} />
+            Explore All 27+ Public Repositories on GitHub
+          </a>
+        </div>
+
       </div>
     </section>
   );

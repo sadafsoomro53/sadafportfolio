@@ -5,24 +5,24 @@ export default function Experience({ experience }) {
   const defaultExperience = [
     {
       id: "1",
-      role: "Senior Full-Stack & AI Developer",
-      company: "InnovateTech Solutions",
-      period: "2024 - Present",
-      description: "Architecting enterprise AI microservices, LLM multi-agent workflows, and high-performance React web interfaces."
+      role: "BS Computer Science Student & Developer",
+      company: "Department of Computer Science",
+      period: "2023 - Present",
+      description: "Pursuing Bachelor's Degree in Computer Science. Focused on Software Engineering principles, Object-Oriented Programming, Data Structures & Algorithms, Operating Systems, and Artificial Intelligence."
     },
     {
       id: "2",
-      role: "Full-Stack Web Developer",
-      company: "CyberPulse Studio",
-      period: "2022 - 2024",
-      description: "Developed over 15+ web applications, RESTful APIs, and cloud database integrations with high client satisfaction."
+      role: "Frontend & Web Application Developer",
+      company: "Open-Source & GitHub Projects",
+      period: "2023 - Present",
+      description: "Developed over 27+ public GitHub repositories including Libro Admin WebApp, Netbryx Web Portal, Vendor Management WebApp, AUTH-NEXT, and responsive JavaScript/React interfaces."
     },
     {
       id: "3",
-      role: "AI & Machine Learning Engineer Intern",
-      company: "DataMind AI Lab",
-      period: "2021 - 2022",
-      description: "Trained neural network models for NLP document extraction and integrated predictions into web frontends."
+      role: "Python & Artificial Intelligence Developer",
+      company: "Machine Learning & AI Projects",
+      period: "2023 - Present",
+      description: "Engineered AI healthcare chatbot (Medical Chatbot using NLP in Jupyter Notebook), Genetic & Meta-Heuristic Optimization algorithms, and Python hardware control scripts."
     }
   ];
 
